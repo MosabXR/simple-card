@@ -19,6 +19,7 @@
         }
 
         .card-header {
+            width: 100%;
             position: relative; /* Move the pseudo element according to the card header */
             overflow: hidden; /* Hide extra content of the pseudo element */
         }
@@ -26,13 +27,13 @@
         .card-header::before {
             content: '';
             position: absolute;
-            left: 0;
-            top: 8.75rem;
-            background-color: #FFF;
+            left: -5rem;
+            top: 0;
+            background-color: white;
             width: 200%;
-            height: 200%;
+            height: 110%;
             z-index: 10; /* Display pseudo element on the top */
-            transform: rotate(-20deg); /* Pseudo element rotation */
+            transform: rotate(-20deg) translateY(50%);
         }
 
         .card-body {
