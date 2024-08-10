@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            background-color: papayawhip;
+            padding: 4rem;
+        }
+
+        .card {
+            max-width: 33.33%;
+            background-color: #FFF;
+        }
+
+        .card-header {
+            position: relative; /* Move the pseudo element according to the card header */
+            overflow: hidden; /* Hide extra content of the pseudo element */
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8.75rem;
+            background-color: #FFF;
+            width: 200%;
+            height: 200%;
+            z-index: 10; /* Display pseudo element on the top */
+            transform: rotate(-20deg); /* Pseudo element rotation */
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        img {
+            width: 100%; /* Control image size inside div */
+            display: block; /* Get rid of overflow pixel at the bottom */
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="img/nature.jpg" alt="Girl in nature">
+                </div>
+                <div class="card-body">
+                    <h2>Title</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam, eaque.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
